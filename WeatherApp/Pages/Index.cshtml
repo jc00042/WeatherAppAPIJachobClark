@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Manchester City Match Predictor Application</h1>
+    <p>
+        This application will give you the record of Manchester City F.C. when playing in different weather conditions.
+    </p>
+    <p>This appplication will also display the type of jersey the club should wear during those weather conditions.</p>
+</div>
+
+<h1 class="text-center">
+    Please pick the competetion Machester City will be competing in.
+</h1>
+
+<body>
+    <div>
+        <ul>
+            <li><a href="/SearchResultsPL">Premier League</a></li>
+            <li><a href="/SearchResultsCL">Champions League</a></li>
+            <li><a href="/SearchResultsFA">FA Cup</a></li>
+            <li><a href="/SearchResultsEFL">EFL Cup</a></li>
+            <li><a href="/SearchResultsCS">Community Shield</a></li>
+        </ul>
+    </div>
+</body>
