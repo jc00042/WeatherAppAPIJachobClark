@@ -6,4 +6,20 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Pages\MatchPredictor.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\MatchPredictor.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\MatchPredictor.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\MatchPredictor.cshtml" />
+  </ItemGroup>
+
 </Project>

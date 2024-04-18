@@ -12,8 +12,8 @@ builder.Services.AddScoped<INewPlayerService, NewPlayerService>();
 builder.Services.AddScoped<IMatches, Matches>();
 builder.Services.AddScoped<INewPlayerService, NewPlayerService>();
 builder.Services.AddScoped<ITeamMatchResults, TeamMatchResults>();
-builder.Services.AddScoped<INewPlayerServices, NewPlayerService>();
-builder.Services.AddScoped<IMatchResults, TeamMatchResults>();
+// builder.Services.AddScoped< INewPlayerService , NewPlayerService > ();
+// builder.Services.AddScoped<ITeamMatchResults, TeamMatchResults>();
 builder.Services.AddDbContext<DbContextClass>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
@@ -23,6 +23,18 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowMyRazorPagesApp",
+        builder =>
+        {
+            builder.WithOrigins("https://localhost:7247")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+        }
+
+        );
+});
 
 var app = builder.Build();
 
@@ -34,6 +46,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowMyRazorPagesApp");
 
 app.UseAuthorization();
 

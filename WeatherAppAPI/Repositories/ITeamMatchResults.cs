@@ -6,6 +6,6 @@ namespace WeatherAppAPI.Repositories
 {
     public interface ITeamMatchResults
     {
-        public Task<List<TeamMatchResults>> GetTeamMatchResults(int TeamID);
+        public Task<List<MatchResults>> GetTeamMatchResults(int TeamID);
     }
 }

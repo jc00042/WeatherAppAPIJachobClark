@@ -12,7 +12,7 @@ namespace WeatherAppAPI.Repositories
 {
     public interface IMatchResultsService
     {
-        public Task<List<MatchResults>> IMatchResultsService.PlayerInfo(int PID)
+        public Task<List<MatchResults>> PlayerInfo(int PID);
 
 
     }

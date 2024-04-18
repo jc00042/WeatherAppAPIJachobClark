@@ -15,11 +15,11 @@ namespace WeatherAppAPI.Repositories
             _dbContextClass = dbContextClass;
         }
 
-        public async Task<List<Team>> GetTeamMatchResults(int TeamID)
+        public async Task<List<MatchResults>> GetTeamMatchResults(int TeamID)
         {
             var param = new SqlParameter("@TID", TeamID);
             var TeammatchDetails = await Task.Run(() => _dbContextClass.MatchResults.FromSqlRaw("exec spGetTeamMatchResults @TeamID", param).ToListAsync());
-            return GetTeamMatchResults;
+            return TeammatchDetails;
         }
     }
 }

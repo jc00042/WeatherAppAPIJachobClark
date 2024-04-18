@@ -1,0 +1,83 @@
+﻿@page
+@model WeatherApp.Pages.MatchPredictorModel
+@{
+}
+
+<head>
+    <link rel="stylesheet" hreft="site.css" />
+    <style>
+        body {
+            background-image: url('https://wallpapercave.com/wp/wp8593971.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<h1 class="h1">Premier League Predictions</h1>
+
+<body>
+    <h2>Please fill out the following information for results:</h2>
+    <div>
+        <div class="dropdown">
+            <button onclick="dropbtnFunction()" class="dropbtn">Choose Opponent</button>
+            <div id="myDropdown" class="dropdown-content">
+                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                <a>Manchester United</a>
+                <a>Liverpool</a>
+                <a>Chelsea</a>
+                <a>Arsenal</a>
+                <a>Newcastle</a>
+                <a>Brentford</a>
+                <a>Tottenham</a>
+            </div>
+        </div>
+
+
+        <div class="dropdown">
+            <button onclick="tempDropbtnFunction()" class="dropbtn">Choose Temperature</button>
+            <div id="myDropdown2" class="dropdown-content">
+                <input type="text" placeholder="Search.." id="myInput2" onkeyup="filterFunction()">
+                <a>80</a>
+                <a>79</a>
+                <a>78</a>
+                <a>77</a>
+                <a>76</a>
+                <a>75</a>
+                <a>74</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <br />
+        <h3 class="text-center">Click the button below to see results:</h3>
+        <div class="text-center"><button>Search</button></div>
+    </div>
+
+
+    <div>
+        <h2>Club Result Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <td class="text-center">Wins</td>
+                    <td class="text-center">Loses</td>
+                    <td class="text-center">Best Result</td>
+                    <td class="text-center">Worst Result</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">0</td>
+                    <td class="text-center">0</td>
+                    <td class="text-center">0</td>
+                    <td class="text-center">0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>

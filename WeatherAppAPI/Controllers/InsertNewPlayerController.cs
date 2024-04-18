@@ -16,16 +16,16 @@ namespace WeatherAppAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class NewPlayerController : ControllerBase
+    public class InsertNewPlayerController : ControllerBase
     {
-        private readonly INewPlayerService newPlayerService;
+        private readonly INewPlayerService _newPlayerService;
 
-        public NewPlayerController(INewPlayerService newPlayerService, INewPlayerService newPlayerService) : this(newPlayerService)
+        public InsertNewPlayerController(INewPlayerService newPlayerService)
         {
-            this.newPlayerService = newPlayerService;
+            _newPlayerService = newPlayerService;
         }
-        [HttpPost]
-        public async Task<IActionResult> InsertNewPlayer(NewPlayer newPlayer)
+       // [HttpPost]
+       // public async Task<IActionResult> InsertNewPlayer(NewPlayer newPlayer)
 
 
 

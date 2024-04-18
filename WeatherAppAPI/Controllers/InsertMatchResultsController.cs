@@ -25,8 +25,8 @@ namespace WeatherAppAPI.Controllers
         {
             this.matchResultsService = matchResultsService;
         }
-        [HttpPost]
-        public async Task<IActionResult> InsertMatchResults(MatchResults matchResults)
+       // [HttpPost]
+       // public async Task<IActionResult> InsertMatchResults(MatchResults matchResults)
 
     }
 
