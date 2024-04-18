@@ -3,11 +3,14 @@
 @{
     var PID = HttpContext.Request.Query["PID"];
 }
-<h1 class="text-center">This is the player information page</h1>
+<h1 class="text-center">Selected Player Information:</h1>
 <h2 id="playerName" style="visibility: hidden;"></h2>
 <div id="playerPosition" style="visibility: hidden;"></div>
 <div id="playerNumber" style="visibility: hidden;"></div>
 
+<input type="text" id="searchInput" placeholder="Enter player name">
+<button onclick="displayPlayerInfo(@PID)">Search</button>
+
 <script type="module">
-    displayPlayerInfo(@PID)
+    displayPlayerInfo("searchInput");
 </script>

@@ -1,0 +1,16 @@
+﻿@page
+@model WeatherApp.Pages.TeamInfoModel
+@{
+    var TeamLocation = HttpContext.Request.Query["TeamLocation"];
+}
+
+<h1 class="text-center">These teams are in the same location:</h1>
+<h2 id="teamName" style="visibility: hidden;"></h2>
+<div id="teamLocation" style="visibility: hidden;"></div>
+
+<input type="text" id="searchInput" placeholder="Enter team location">
+<button onclick="displayTeamInfo(@TeamLocation)">Search</button>
+
+<script type="module">
+    displayTeamInfo("London");
+</script>

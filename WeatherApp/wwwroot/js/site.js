@@ -30,4 +30,17 @@ async function displayPlayerInfo(PID) {
     const data = await response.json();
     document.getElementById('pName').innerHTML = data[0].pName;
     document.getElementById('pName').style.visibility = "visible";
+    document.getElementById('pPosition').innerHTML = data[0].pPosition;
+    document.getElementById('pPosition').style.visibility = "visible";
+    document.getElementById('pNumber').innerHTML = data[0].pNumber;
+    document.getElementById('pNumber').style.visibility = "visible";
+}
+
+async function displayTeamInfo(TeamLocation) {
+    const reponse = await fetch(`https://localhost:7258/api/Team/${TeamLocation}`)
+    const data = await response.json();
+    document.getElementById('teamName').innerHTML = data[0].teamName;
+    document.getElementById('teamName').style.visibility = "visible";
+    document.getElementById('teamLocation').innerHTML = data[0].teamLocation;
+    document.getElementById('teamLocation').style.visibility = "visible";
 }
